@@ -1,4 +1,4 @@
-package com.simple.lplcodingchallenge
+package com.simple.lplcodingchallenge.presentation.views.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
