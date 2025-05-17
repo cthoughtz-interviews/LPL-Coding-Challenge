@@ -18,7 +18,11 @@ class PostViewModel @Inject constructor(private val postUseCase: PostUseCase) : 
     private val _postResultFlow = MutableStateFlow<PostResult<PostResponse>>(PostResult.None)
     val postResultFlow = _postResultFlow.asStateFlow()
 
-    fun getPost() {
+    init {
+        getPost()
+    }
+
+    private fun getPost() {
         _postResultFlow.update { PostResult.Loading }
         viewModelScope.launch {
             val result = postUseCase.getPost()

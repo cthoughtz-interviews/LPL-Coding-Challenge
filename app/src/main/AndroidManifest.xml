@@ -2,9 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- For Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- For older versions -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
+        android:name=".presentation.views.MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,7 +22,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LPLCodingChallenge"
-        android:name=".presentation.views.MyApplication"
         tools:targetApi="31">
         <activity
             android:name=".presentation.views.activities.MainActivity"

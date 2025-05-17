@@ -1,7 +1,6 @@
 package com.simple.lplcodingchallenge.data.networking
 
 import com.simple.lplcodingchallenge.domain.model.PostResponse
-import com.simple.lplcodingchallenge.presentation.util.PostResult
 import retrofit2.http.GET
 
 interface ApiService {
