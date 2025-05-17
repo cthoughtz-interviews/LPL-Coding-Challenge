@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -131,4 +132,10 @@ dependencies {
     // Testing
     testImplementation("androidx.arch.core:core-testing:2.2.0")
     testImplementation("app.cash.turbine:turbine:1.0.0")
+    testImplementation("io.mockk:mockk:1.13.4")
+    testImplementation("app.cash.turbine:turbine:0.12.1")
+    testImplementation("com.google.truth:truth:1.1.3")
+    testImplementation("androidx.test.ext:truth:1.5.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
+
 }

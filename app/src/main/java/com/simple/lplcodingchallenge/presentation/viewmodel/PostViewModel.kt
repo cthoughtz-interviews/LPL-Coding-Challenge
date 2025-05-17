@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PostViewModel @Inject constructor(private val postUseCase: PostUseCase) : ViewModel() {
 
-    private val _postResultFlow = MutableStateFlow<PostResult<PostResponse>>(PostResult.None)
+    val _postResultFlow = MutableStateFlow<PostResult<PostResponse>>(PostResult.None)
     val postResultFlow = _postResultFlow.asStateFlow()
 
     init {
